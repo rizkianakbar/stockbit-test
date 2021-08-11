@@ -53,8 +53,8 @@ export default function Movie() {
                     <strong>Year : </strong>
                     <span>{movie.year}</span>
                   </p>
-                  <Link to={`/products/${index}`}>
-                    <Button href="#">Detail</Button>
+                  <Link to={`/products/${movie.title}`}>
+                    <Button>Detail</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -77,8 +77,8 @@ export default function Movie() {
                     <strong>Year : </strong>
                     <span>{movie.year}</span>
                   </p>
-                  <Link to={`/products/${index}`}>
-                    <Button href="#">Detail</Button>
+                  <Link to={`/movie/${movie.title}`}>
+                    <Button>Detail</Button>
                   </Link>
                 </CardContent>
               </Card>
