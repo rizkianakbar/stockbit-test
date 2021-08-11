@@ -1,5 +1,42 @@
 import ModalImage from "react-modal-image";
-import styled from "styled-components";
+
+import styled, { keyframes } from "styled-components";
+
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const Container = styled.div`
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Spinner = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  animation: ${rotate360} 1s linear infinite;
+  transform: translateZ(0);
+
+  border-top: 2px solid grey;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-left: 4px solid black;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+`;
 
 export const CardContainer = styled.div`
   margin-top: 100px !important;

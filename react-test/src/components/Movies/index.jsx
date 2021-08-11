@@ -1,7 +1,15 @@
 import React, { useState, useRef, useCallback } from "react";
 import MovieSearch from "./MovieSearch";
 import { Search, SearchContainer } from "./styled";
-import { Container, Card, CardImage, CardContent, Button } from "./styled";
+import {
+  Container,
+  Card,
+  CardImage,
+  CardContent,
+  Button,
+  Spinner,
+  ContainerSpinner,
+} from "./styled";
 import { Link } from "react-router-dom";
 
 export default function Movie() {
@@ -86,7 +94,7 @@ export default function Movie() {
           );
         }
       })}
-      <div>{loading && "Loading..."}</div>
+      <ContainerSpinner>{loading && <Spinner />}</ContainerSpinner>;
       <div>{error && "Error"}</div>
     </>
   );
