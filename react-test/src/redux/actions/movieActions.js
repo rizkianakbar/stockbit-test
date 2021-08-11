@@ -5,11 +5,17 @@ export const setMovie = (movie) => {
     type: actionTypes.SET_MOVIE,
     payload: movie,
   };
-}
+};
 
 export const setMovieDetails = (movie) => {
   return {
     type: actionTypes.SET_MOVIE_DETAILS,
     payload: movie,
   };
-}
+};
+
+export const removeSelectedMovie = () => {
+  return {
+    type: actionTypes.REMOVE_SELECTED_MOVIE,
+  };
+};
