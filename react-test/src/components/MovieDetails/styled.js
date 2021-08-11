@@ -1,3 +1,4 @@
+import ModalImage from "react-modal-image";
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
@@ -28,7 +29,6 @@ export const ImgContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 `;
 
@@ -36,9 +36,10 @@ export const Image = styled.div`
   display: flex;
   width: 100%;
   transition: all 0.5s ease;
-  img {
-    max-width: 100%;
-  }
+`;
+
+export const Img = styled(ModalImage)`
+  max-width: 100%;
 `;
 
 export const Content = styled.div`
