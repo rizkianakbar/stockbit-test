@@ -9,7 +9,7 @@ const MovieSearch = (keyword, pageNumber) => {
   const [error, setError] = useState(false);
   const [movies, setMovies] = useState([]);
   const [hasMore, setHasMore] = useState(false);
-  const [data, setData] = useState({});
+  // const [data, setData] = useState({});
 
   useEffect(() => {
     setMovies([]);
@@ -27,7 +27,7 @@ const MovieSearch = (keyword, pageNumber) => {
     })
       .then((res) => {
         if (res.data.Response !== "False") {
-          setData(res.data.Search);
+          // setData(res.data.Search);
           setMovies((prevBooks) => {
             return [
               ...new Set([
@@ -57,8 +57,8 @@ const MovieSearch = (keyword, pageNumber) => {
           // );
           setHasMore(res.data.Search.length > 0);
           setLoading(false);
+          dispatch(setMovie(movies));
         }
-        dispatch(setMovie(res.data));
       })
       .catch((e) => {
         if (axios.isCancel(e)) return;

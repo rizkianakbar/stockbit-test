@@ -12,6 +12,7 @@ import {
   Content,
   Title,
   Desc,
+  Img,
   ListDesc,
   CardContainer,
 } from "./styled";
@@ -38,21 +39,17 @@ const MovieDetails = ({ id }) => {
     dispatch(setMovieDetails(response.data));
   };
 
-  const onClickImage = () => {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-  };
-
   return (
     <CardContainer>
       <Card>
         <ImgContainer>
           <Image>
-            <img
-              src={detailMovies.Poster}
-              alt="{detailMovies.Title}"
-              onClick={onClickImage}
+            <Img
+              small={detailMovies.Poster}
+              large={detailMovies.Poster}
+              alt={detailMovies.Title}
             />
+            ;
           </Image>
         </ImgContainer>
         <Content>
